@@ -200,6 +200,14 @@ git diff --name-only "another_branch"
 
 
 
+" =====> Compare changes not staged inside a file"
+
+git diff < folder || file || */file >
+
+
+
+
+
 " =====> Merge Changes Between Two Branches (You need to specify since another branch)"
 
 git merge "another_branch"
