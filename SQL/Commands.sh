@@ -46,7 +46,7 @@
 
  " =====> Text Field"
 
- ~ SELECT * FROM Customers WHERE Customer_name="John";
+ ~ SELECT * FROM Customers WHERE Customer_name='John';
 
 " =====> Numeric Field" 
 
@@ -69,7 +69,7 @@
 
 
 // "==========================================================================================="
-// " =====> SELECT QUERY ORDER BY ============================================================="
+// "======> SELECT QUERY ORDER BY ============================================================="
 // "==========================================================================================="
 
  ~ SELECT <column1>, <column2>, ... FROM <table_name> ORDER BY <column1>, <column2>, ... ASC|DESC; 
@@ -87,3 +87,53 @@
 " =====> ORDER BY DESC - MANY COLUMNS"
 
  ~ SELECT * FROM Customers ORDER BY Country, CustomerName;
+
+
+
+// "==========================================================================================="
+// "======> THE SQL 'AND' OPERATOR ============================================================"
+// "==========================================================================================="
+
+
+" =====> The AND operator is used to filter records based on more than one condition. All Conditions Must Be True!!!"
+
+ ~ SELECT <column1>, <column2>, ... FROM <table_name> WHERE <condition1> AND <condition2> AND <condition3> ...; 
+
+
+
+
+" =====> Select all customers from Spain that starts with the letter 'G':"
+
+ ~ SELECT * FROM Customers WHERE Country = 'Spain' AND CustomerName LIKE 'G%';
+
+
+
+
+// "==========================================================================================="
+// "======> THE SQL 'OR' OPERATOR ============================================================="
+// "==========================================================================================="
+
+" =====> The OR operator displays a record if any of the conditions are TRUE"
+ 
+ ~ SELECT <column1>, <column2>, ... FROM <table_name> WHERE <condition1> OR <condition2> OR <condition3> ...;
+
+
+
+" =====> Select all customers from Germany or Spain:"
+
+ ~ SELECT * FROM Customers WHERE Country = 'Germany' OR Country = 'Spain';
+
+
+
+
+" =====> Combining AND and OR"
+
+" The following SQL statement selects all customers from Spain that starts with a "G" or an "R"."
+
+ ~ SELECT * FROM Customers WHERE Country = 'Spain' AND (CustomerName LIKE 'G%' OR CustomerName LIKE 'R%'); 
+
+
+
+" Without parenthesis, the select statement will return all customers from Spain that starts with a "G", plus all customers that starts with an "R", regardless of the country value:"
+
+ ~ SELECT * FROM Customers WHERE Country = 'Spain' AND CustomerName LIKE 'G%' OR CustomerName LIKE 'R%';
