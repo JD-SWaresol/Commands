@@ -137,3 +137,46 @@
 " Without parenthesis, the select statement will return all customers from Spain that starts with a "G", plus all customers that starts with an "R", regardless of the country value:"
 
  ~ SELECT * FROM Customers WHERE Country = 'Spain' AND CustomerName LIKE 'G%' OR CustomerName LIKE 'R%';
+
+
+
+
+// "==========================================================================================="
+// "======> THE SQL 'NOT' OPERATOR ============================================================"
+// "==========================================================================================="
+
+" =====> The NOT operator is used in combination with other operators to give the opposite result"
+
+ ~ SELECT <column1>, <column2>, ... FROM <table_name> WHERE NOT <condition>;
+
+
+
+
+" =====> Example: Select only the customers that are NOT from Spain:"
+
+ ~ SELECT * FROM Customers WHERE NOT Country = 'Spain';
+
+
+ " =====> NOT LIKE: Select customers that does not start with the letter 'A':"
+
+ ~ SELECT * FROM Customers WHERE CustomerName NOT LIKE 'A%';
+
+
+ " =====> NOT BETWEEN: Select customers with a customerID not between 10 and 60:"
+
+ ~ SELECT * FROM Customers WHERE CustomerID NOT BETWEEN 10 AND 60;
+
+
+ " =====> NOT IN: Select customers that are not from Paris or London:"
+
+ ~ SELECT * FROM Customers WHERE City NOT IN ('Paris', 'London');
+
+
+ " =====> NOT Greater Than: Select customers with a CustomerId not greater than 50:"
+
+ ~ SELECT * FROM Customers WHERE NOT CustomerID > 50;
+
+
+ " =====> NOT Less Than: Select customers with a CustomerID not less than 50:"
+
+ ~ SELECT * FROM Customers WHERE NOT CustomerId < 50;

@@ -8,4 +8,4 @@ URL: https://skilledcoder.medium.com/unique-and-lesser-known-sql-tricks-535a49b0
 
 
 
-Last Point: https://www-w3schools-com.translate.goog/sql/sql_not.asp?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc
+Last Point: https://www-w3schools-com.translate.goog/sql/sql_insert.asp?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc
