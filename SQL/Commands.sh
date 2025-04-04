@@ -180,3 +180,39 @@
  " =====> NOT Less Than: Select customers with a CustomerID not less than 50:"
 
  ~ SELECT * FROM Customers WHERE NOT CustomerId < 50;
+
+
+
+
+// "==========================================================================================="
+// "======> THE SQL 'INSERT INTO' OPERATOR ===================================================="
+// "==========================================================================================="
+
+" =====> The INSERT INTO statement is used to insert new records in a table."
+
+ ~ INSERT INTO <table_name> ( <column1>, <column2>, <column3>, ...) VALUES (<value1>, <value2>, <value3>, ...); 
+
+
+
+
+
+" =====> INSERT INTO Example: The following SQL statement inserts a new record in the "Customers" table:"
+
+ ~ INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country) VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
+
+
+" =====> Insert Data Only in Specified Columns Example: It is also possible to only insert data in specific columns."
+
+ ~ INSERT INTO Customers (CustomerName, City, Country) VALUES ('Cardinal', 'Stavanger', 'Norway');
+
+
+" =====> Insert Multiple Rows Example: It is also possible to insert multiple rows in one statement."
+
+ ~ INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES
+('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway'),
+('Greasy Burger', 'Per Olsen', 'Gateveien 15', 'Sandnes', '4306', 'Norway'),
+('Tasty Tee', 'Finn Egan', 'Streetroad 19B', 'Liverpool', 'L1 0AA', 'UK');
+
+
+
