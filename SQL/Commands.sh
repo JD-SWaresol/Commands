@@ -216,3 +216,29 @@ VALUES
 
 
 
+
+// "==========================================================================================="
+// "======> THE SQL 'NULL' OPERATOR ==========================================================="
+// "==========================================================================================="
+
+" =====> A field with a NULL value is a field with no value.."
+" =====> We will have to use the IS NULL and IS NOT NULL operators instead."
+
+"IS NULL Syntax"
+
+ ~ SELECT <column_names> FROM <table_name> WHERE <column_name> IS NULL; 
+
+"IS NOT NULL Syntax"
+
+ ~ SELECT column_names FROM table_name WHERE column_name IS NOT NULL;
+
+
+
+
+"IS NULL Operator : The IS NULL operator is used to test for empty values (NULL values)."
+
+ ~ SELECT CustomerName, ContactName, Address FROM Customers WHERE Address IS NULL;
+
+"IS NOT NULL Operator : The IS NOT NULL operator is used to test for non-empty values (NOT NULL values)."
+
+ ~ SELECT CustomerName, ContactName, Address FROM Customers WHERE Address IS NOT NULL;
