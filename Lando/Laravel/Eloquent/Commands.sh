@@ -88,4 +88,39 @@ php artisan model:show Flight
 
 " =====> Convenciomnes del modelo Eloquent"
 
-"+" ""
+"+" "Los modelos generados por el make:modelcomando se guardarán en el app/Modelsdirectorio. 
+    Examinemos una clase de modelo básica y analicemos algunas de las convenciones clave de Eloquent:"
+
+<?php
+
+    namespace App\Models;
+    
+    use Illuminate\Database\Eloquent\Model;
+    
+    class Flight extends Model
+    {
+        // ...
+    }
+?>
+
+" =====> Nombres de tablas"
+
+"+" "Eloquent asumirá que el Flightmodelo almacena registros en la flightstabla, mientras que un 'AirTrafficControllermodelo' 
+    almacenaría registros en una 'air_traffic_controllerstabla'."
+
+<?php
+    
+    ...
+
+    class Flight extends Model
+    {
+        /**
+         * The table associated with the model.
+         *
+         * @var string
+        */
+              
+        protected $table = 'my_flights';
+              
+    }
+?>
